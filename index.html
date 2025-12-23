@@ -3,28 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Nachiappan Nachiappan - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Your Name</h1>
-            <p class="tagline">Web Developer | Designer</p>
-        </header>
-        
-        <section class="about">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! I'm a passionate developer who loves creating beautiful and functional web experiences.</p>
-        </section>
-        
-        <section class="contact">
-            <h2>Get In Touch</h2>
-            <div class="links">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="mailto:your.email@example.com">Email</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Nachiappan</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Nachiappan Nachiappan</span></h1>
+            <p class="hero-subtitle">Cybersecurity & ML Engineer</p>
+            <p class="hero-description">Applying machine learning to cybersecurity challenges, with hands-on skills in SIEM platforms and competitive CTF hackathons</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary">View Work</a>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Pursuing a Master of Computing in Infocomm Security at the National University of Singapore, with a focus on applying machine learning to cybersecurity challenges. This is demonstrated through projects and research, such as developing ML models for deepfake detection and authoring a paper on ML-based anomaly detection in cybersecurity.</p>
+                    <p>This technical foundation is strengthened by hands-on skills with SIEM platforms like Splunk and consistent participation in competitive CTF hackathons. I'm passionate about building secure systems and leveraging AI to solve complex security problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Languages</h3>
+                    <p>Python, SQL, JavaScript, C, Solidity, Scripting</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>CTF, Pen-testing Tools, Splunk, SIEM platforms</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Data & AI</h3>
+                    <p>Machine Learning & AI, Tableau, Data Analysis</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>IoT & Embedded</h3>
+                    <p>IoT and Embedded Systems, Arduino, ESP-32</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>MERN Stack, React JS, PHP, HTML/CSS</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📝</div>
+                    <h3>Research</h3>
+                    <p>Research and Writing, Academic Publications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🎭</div>
+                    <h3>Deepfake Detection</h3>
+                    <p>Detection of fake and manipulated images using MTCNN for accurate face detection and advanced color grading techniques. Implemented InceptionRestNet V1 and GradCam for classification performance optimization.</p>
+                    <div class="project-tech">MTCNN, InceptionRestNet V1, GradCam</div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Details</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">⛓️</div>
+                    <h3>To-Do List Using Smart Contracts</h3>
+                    <p>Created a decentralized To-Do list application using Ethereum blockchain. Optimized transaction processes by effectively managing gas fees, enhancing the efficiency of task creation and execution.</p>
+                    <div class="project-tech">Ganache, Metamask, Solidity</div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Details</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📦</div>
+                    <h3>Asset Performance Tracking System</h3>
+                    <p>Architected a full-scale AIoT system including Drone and RFID for secure supply chain using Edge computing and private cloud. Built an anomaly detection system that relies entirely on edge systems.</p>
+                    <div class="project-tech">ML models, Openstack, Docker, Scripting, MySQL</div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Details</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🍯</div>
+                    <h3>Honey File Security Dashboard</h3>
+                    <p>Proactively detect insider threats and lateral movement by building a SIEM-like dashboard combining active deception with context-aware user behavior analytics for high-confidence anomaly detection.</p>
+                    <div class="project-tech">SIEM Dashboard, Honey Files, Probabilistic Anomaly Detection</div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Details</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🤖</div>
+                    <h3>IoT Line Follower Robot</h3>
+                    <p>Developed a prototype for efficient transportation of goods within small areas by engineering a robust design capable of functioning in all lighting conditions. A low-powered robot following a line for small scale industries.</p>
+                    <div class="project-tech">Arduino, IR Sensor, Ultrasonic Sensor, C Sketch</div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Details</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🏥</div>
+                    <h3>IoT Based Elderly Healthcare</h3>
+                    <p>Developed a wearable device that achieved 99% accuracy in fall detection, enhancing user safety through real-time alerts. Integrated medication reminder system with location-based notifications using IoT sensors and Firebase.</p>
+                    <div class="project-tech">C Sketch, MPU 6050, RTC DS2321, ESP-32, Firebase</div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Details</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="section-title">Research Publications</h2>
+            <div class="research-list">
+                <div class="research-item">
+                    <h3>Time and Accuracy Optimised IoT Elderly Healthcare System</h3>
+                    <p class="research-meta">IEEE | Scopus Indexed | DOI: 10.1109/IDCIT59759.2024.1046781</p>
+                    <p class="research-desc">Published research on IoT-based healthcare monitoring system achieving 99% accuracy in fall detection.</p>
+                </div>
+                <div class="research-item">
+                    <h3>Machine Learning Based Anomaly Detection in Cybersecurity</h3>
+                    <p class="research-meta">Wiley IET Information Security | Under Review</p>
+                    <p class="research-desc">A contemporary approach to ML-based anomaly detection in cybersecurity systems.</p>
+                </div>
+                <div class="research-item">
+                    <h3>ITRAC: Intelligent Tracking and Real-Time Analysis on Cloud</h3>
+                    <p class="research-meta">TENCON 2025 | Kota Kinabalu, Malaysia</p>
+                    <p class="research-desc">Research work on intelligent tracking using RFID and MQTT for cloud-based real-time analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-icon">🏆</div>
+                    <h3>4th Place - Hackathon X</h3>
+                    <p>National Cybersecurity Research Council's Hackathon X (Dec 2024)</p>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🥇</div>
+                    <h3>1st Place - Volleyball</h3>
+                    <p>Intra-college Volleyball tournament Paletra (Aug 2024)</p>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🔐</div>
+                    <h3>Google Cyber Security</h3>
+                    <p>Professional Certification (Coursera, Aug 2024)</p>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🎯</div>
+                    <h3>Junior Penetration Tester</h3>
+                    <p>TryHackMe (Sep 2024)</p>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">📊</div>
+                    <h3>Tableau Training</h3>
+                    <p>Simplilearn (Mar 2024)</p>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🛡️</div>
+                    <h3>Ethical Hacking</h3>
+                    <p>Learn Ethical Hacking from Scratch 2024 (Udemy, Jul 2024)</p>
+                </div>
+            </div>
+            <div class="achievements-section">
+                <h3 class="achievements-title">Additional Achievements</h3>
+                <ul class="achievements-list">
+                    <li>🏅 Top 13% rank-holder in TryHackMe (Aug & Sep 2024)</li>
+                    <li>🎓 Organized 'Brainstorm' - Inter-college quiz competition with 300+ participants (Mar 2024)</li>
+                    <li>🏁 Participated in CTF hackathons: Xenon CTF, Hackathon X, H7CTF (Jul 2024 - Present)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">Feel free to reach out if you want to collaborate or just say hi!</p>
+            <div class="contact-links">
+                <a href="https://github.com/Nachu-N" target="_blank" class="contact-link">
+                    <span class="contact-icon">🐙</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:nachu.ncn@gmail.com" class="contact-link">
+                    <span class="contact-icon">✉️</span>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/nachiappan-nachiappan" target="_blank" class="contact-link">
+                    <span class="contact-icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nachiappan Nachiappan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
