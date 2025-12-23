@@ -364,6 +364,26 @@ section {
     font-size: 2.7rem;
 }
 
+.skill-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.icon-credit {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.icon-credit a {
+    color: var(--gold-light);
+    text-decoration: none;
+}
+
+.icon-credit a:hover {
+    text-decoration: underline;
+}
+
 /* Projects Section */
 .projects {
     background: var(--bg-light);
