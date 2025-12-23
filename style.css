@@ -48,6 +48,40 @@ body {
     opacity: 0.3;
 }
 
+/* Jelly Blobs */
+.jelly-blob {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.75;
+    filter: blur(0.5px);
+    background: radial-gradient(circle at 30% 30%, rgba(255, 214, 10, 0.9), rgba(199, 125, 255, 0.6));
+    animation: jellyMorph 14s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+.jelly-purple {
+    background: radial-gradient(circle at 30% 30%, rgba(199, 125, 255, 0.95), rgba(26, 11, 46, 0.9));
+}
+
+.jelly-gold {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 214, 10, 0.97), rgba(251, 133, 0, 0.8));
+}
+
+@keyframes jellyMorph {
+    0% {
+        border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        border-radius: 65% 35% 70% 30% / 55% 60% 40% 45%;
+        transform: translate(18px, -22px) scale(1.08);
+    }
+    100% {
+        border-radius: 55% 45% 35% 65% / 60% 40% 60% 40%;
+        transform: translate(-16px, 12px) scale(1.04);
+    }
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
