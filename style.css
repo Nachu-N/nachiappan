@@ -592,6 +592,36 @@ section {
     font-size: 1.05rem;
 }
 
+.research-toggle {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.3rem;
+    border-radius: 999px;
+    border: 2px solid var(--purple-light);
+    background: white;
+    color: var(--purple-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.research-toggle:hover {
+    background: var(--purple-light);
+    color: white;
+    box-shadow: 0 5px 15px rgba(123, 44, 191, 0.3);
+}
+
+.research-abstract {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    margin-top: 0.5rem;
+}
+
+.research-item.open .research-abstract {
+    max-height: 500px;
+}
+
 /* Certifications Section */
 .certifications {
     background: linear-gradient(180deg, var(--purple-dark) 0%, var(--purple-mid) 50%, var(--gold) 100%);

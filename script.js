@@ -56,3 +56,12 @@ document.querySelectorAll('.skill-card, .project-card, .about-text').forEach(el 
     observer.observe(el);
 });
 
+// Research abstract toggle
+document.querySelectorAll('.research-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.closest('.research-item');
+        const isOpen = item.classList.toggle('open');
+        button.textContent = isOpen ? 'Hide abstract' : 'View abstract';
+    });
+});
+
