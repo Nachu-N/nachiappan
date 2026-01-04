@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Construction - Nachiappan's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <style>
+        :root {
+            --purple-dark: #1a0b2e;
+            --purple-mid: #4a148c;
+            --purple-light: #7b2cbf;
+            --magenta: #c77dff;
+            --gold: #ffb703;
+            --gold-light: #ffd60a;
+        }
+
         .construction-container {
             min-height: 100vh;
             display: flex;
@@ -22,18 +32,13 @@
         .construction-container::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255, 183, 3, 0.1) 10px,
-                rgba(255, 183, 3, 0.1) 20px
-            );
-            animation: slide 20s linear infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.1'%3E%3Cpath d='M10 10h20v20H10z' fill='none' stroke='%23ffb703' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%237b2cbf' stroke-width='1'/%3E%3Cpath d='M20 20L30 30M30 20L20 30' stroke='%23ffb703' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+            animation: slide 30s linear infinite;
         }
 
         @keyframes slide {
@@ -44,46 +49,101 @@
         .construction-content {
             position: relative;
             z-index: 1;
-            max-width: 600px;
-        }
-
-        .construction-gif {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            margin-bottom: 2rem;
+            max-width: 700px;
         }
 
         .construction-title {
             font-size: 3rem;
             color: var(--gold);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: bounce 2s ease-in-out infinite;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 183, 3, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .tech-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .tech-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .tech-icon:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.15);
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(255, 183, 3, 0.5);
+        }
+
+        .tech-icon i {
+            font-size: 3rem;
+            color: var(--gold-light);
         }
 
         .construction-text {
-            font-size: 1.5rem;
-            color: white;
-            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
             line-height: 1.8;
+            font-weight: 400;
         }
 
-        .construction-emoji {
-            font-size: 4rem;
-            margin: 1rem 0;
-            animation: rotate 3s linear infinite;
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 183, 3, 0.2);
+            border: 2px solid var(--gold);
+            border-radius: 25px;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            color: var(--gold-light);
+            font-weight: 600;
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
         }
 
         .back-button {
@@ -106,33 +166,75 @@
             background: var(--gold-light);
         }
 
+        .cyber-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(123, 44, 191, 0.03) 2px, rgba(123, 44, 191, 0.03) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 183, 3, 0.03) 2px, rgba(255, 183, 3, 0.03) 4px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
         @media (max-width: 768px) {
             .construction-title {
                 font-size: 2rem;
             }
 
             .construction-text {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
-            .construction-emoji {
-                font-size: 3rem;
+            .tech-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .tech-icon i {
+                font-size: 2.5rem;
+            }
+
+            .tech-icons {
+                gap: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="construction-container">
+        <div class="cyber-grid"></div>
         <div class="construction-content">
-            <h1 class="construction-title">🚧 Under Construction 🚧</h1>
-            <div class="construction-emoji">⚙️</div>
-            <img src="https://media.giphy.com/media/l0MYC0LajboP0k7vO/giphy.gif" alt="Construction" class="construction-gif" onerror="this.style.display='none';">
+            <h1 class="construction-title">UNDER CONSTRUCTION</h1>
+            
+            <div class="tech-icons">
+                <div class="tech-icon">
+                    <i class="devicon-linux-plain"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-python-plain"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-arduino-plain"></i>
+                </div>
+                <div class="tech-icon">
+                    <i class="devicon-docker-plain"></i>
+                </div>
+            </div>
+
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>Development in Progress</span>
+            </div>
+
             <p class="construction-text">
-                Oops! This page is still being built! 🛠️<br>
-                I'm working hard to get this ready for you.<br>
-                Check back soon or explore other parts of my portfolio!
+                This section is currently being developed with enhanced security protocols and IoT integration.<br>
+                I'm implementing robust cybersecurity measures and optimizing the infrastructure.<br>
+                Please check back soon for updates.
             </p>
-            <div class="construction-emoji">🔨</div>
+
             <a href="index.html" class="back-button">← Back to Portfolio</a>
         </div>
     </div>
