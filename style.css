@@ -601,6 +601,11 @@ section {
     transition: all 0.3s ease;
     overflow: hidden;
     border: 3px solid transparent;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -614,11 +619,15 @@ section {
     text-align: center;
     margin-bottom: 0;
     height: 180px;
+    max-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--purple-light), var(--magenta));
     border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .project-image i {
@@ -630,9 +639,12 @@ section {
 .project-logo {
     width: 80px;
     height: 80px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .project-card:hover .project-logo {
@@ -709,6 +721,10 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border-left: 5px solid var(--gold);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .research-item:hover {
@@ -721,11 +737,16 @@ section {
     align-items: flex-start;
     gap: 1.5rem;
     margin-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .research-logo {
     width: 80px;
     height: 60px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     flex-shrink: 0;
     transition: all 0.3s ease;
@@ -736,11 +757,14 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .research-logo img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
 }
 
@@ -852,6 +876,13 @@ section {
     text-align: center;
     border: 2px solid rgba(255, 183, 3, 0.3);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .cert-item:hover {
@@ -868,6 +899,9 @@ section {
     align-items: center;
     justify-content: center;
     min-height: 60px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .cert-icon svg {
@@ -878,11 +912,21 @@ section {
 .cert-logo {
     width: 60px;
     height: 60px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     transition: all 0.3s ease;
     border-radius: 8px;
     padding: 8px;
     background: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.cert-logo svg {
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    max-height: 60px;
 }
 
 .google-logo {
@@ -916,6 +960,11 @@ section {
 
 .tableau-logo {
     background: rgba(233, 118, 39, 0.1);
+    padding: 0;
+}
+
+.tableau-logo svg {
+    border-radius: 8px;
 }
 
 .cert-item:hover .tableau-logo {
@@ -1425,7 +1474,19 @@ footer {
     .cert-logo {
         width: 50px;
         height: 50px;
+        max-width: 50px;
+        max-height: 50px;
         padding: 6px;
+    }
+
+    .cert-logo svg {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .cert-icon {
+        min-height: 50px;
+        max-width: 100%;
     }
 
     .research-header {
@@ -1436,25 +1497,15 @@ footer {
     .research-logo {
         width: 60px;
         height: 45px;
+        max-width: 60px;
+        max-height: 45px;
         align-self: flex-start;
         padding: 8px;
     }
 
-    .research-logo svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    .research-logo svg text {
-        font-size: 20px !important;
-    }
-
-    .wiley-logo svg text {
-        font-size: 22px !important;
-    }
-
-    .wiley-logo svg text:last-child {
-        font-size: 12px !important;
+    .research-logo img {
+        max-width: 100%;
+        max-height: 100%;
     }
 
     .icon-row i {
@@ -1473,6 +1524,13 @@ footer {
     .project-logo {
         width: 60px;
         height: 60px;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .project-image {
+        height: 120px;
+        max-height: 120px;
     }
 
     .project-card h3 {
