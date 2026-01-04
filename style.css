@@ -513,11 +513,6 @@ section {
     font-size: 2.7rem;
 }
 
-.skill-img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
 
 .icon-credit {
     margin-top: 0.75rem;
@@ -653,7 +648,7 @@ section {
 
 .research-logo {
     width: 80px;
-    height: auto;
+    height: 60px;
     object-fit: contain;
     flex-shrink: 0;
     transition: all 0.3s ease;
@@ -661,6 +656,20 @@ section {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     border: 2px solid rgba(255, 183, 3, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.research-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.research-logo svg {
+    width: 100%;
+    height: 100%;
 }
 
 .ieee-logo {
@@ -1303,8 +1312,26 @@ footer {
 
     .research-logo {
         width: 60px;
+        height: 45px;
         align-self: flex-start;
         padding: 8px;
+    }
+
+    .research-logo svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .research-logo svg text {
+        font-size: 20px !important;
+    }
+
+    .wiley-logo svg text {
+        font-size: 22px !important;
+    }
+
+    .wiley-logo svg text:last-child {
+        font-size: 12px !important;
     }
 
     .icon-row i {
