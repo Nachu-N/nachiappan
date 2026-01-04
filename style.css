@@ -667,6 +667,11 @@ section {
     object-fit: contain;
 }
 
+.research-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
 .ieee-logo {
     background: rgba(0, 98, 155, 0.1);
     border-color: rgba(0, 98, 155, 0.3);
@@ -1312,6 +1317,22 @@ footer {
         padding: 8px;
     }
 
+    .research-logo svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .research-logo svg text {
+        font-size: 20px !important;
+    }
+
+    .wiley-logo svg text {
+        font-size: 22px !important;
+    }
+
+    .wiley-logo svg text:last-child {
+        font-size: 12px !important;
+    }
 
     .icon-row i {
         font-size: 2.2rem;
