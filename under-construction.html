@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction - Nachiappan's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .construction-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-mid) 50%, var(--magenta) 100%);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .construction-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 183, 3, 0.1) 10px,
+                rgba(255, 183, 3, 0.1) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .construction-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+
+        .construction-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .construction-title {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .construction-text {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .construction-emoji {
+            font-size: 4rem;
+            margin: 1rem 0;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--purple-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 183, 3, 0.5);
+            background: var(--gold-light);
+        }
+
+        @media (max-width: 768px) {
+            .construction-title {
+                font-size: 2rem;
+            }
+
+            .construction-text {
+                font-size: 1.2rem;
+            }
+
+            .construction-emoji {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="construction-container">
+        <div class="construction-content">
+            <h1 class="construction-title">🚧 Under Construction 🚧</h1>
+            <div class="construction-emoji">⚙️</div>
+            <img src="https://media.giphy.com/media/l0MYC0LajboP0k7vO/giphy.gif" alt="Construction" class="construction-gif" onerror="this.style.display='none';">
+            <p class="construction-text">
+                Oops! This page is still being built! 🛠️<br>
+                I'm working hard to get this ready for you.<br>
+                Check back soon or explore other parts of my portfolio!
+            </p>
+            <div class="construction-emoji">🔨</div>
+            <a href="index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </div>
+</body>
+</html>
+
