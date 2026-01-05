@@ -285,22 +285,34 @@ body::after {
     align-items: center;
 }
 
-.tryhackme-badge {
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.tryhackme-badge-fixed {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+    width: 280px;
+    height: 400px;
+    background: rgba(26, 11, 46, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 183, 3, 0.3);
+    transition: all 0.3s ease;
 }
 
-.tryhackme-badge iframe {
+.tryhackme-badge-fixed:hover {
+    transform: translateY(-50%) scale(1.05);
+    border-color: var(--gold);
+    box-shadow: 0 15px 50px rgba(255, 183, 3, 0.4);
+}
+
+.tryhackme-badge-fixed iframe {
     width: 100%;
-    max-width: 500px;
-    height: 150px;
+    height: 100%;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
 }
 
 .hero-title {
@@ -1226,13 +1238,20 @@ footer {
         padding: 0 0.5rem;
     }
 
-    .tryhackme-badge {
-        margin-bottom: 1.5rem;
+    .tryhackme-badge-fixed {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        transform: none;
+        width: 200px;
+        height: 280px;
+        padding: 10px;
     }
 
-    .tryhackme-badge iframe {
-        max-width: 100%;
-        height: 120px;
+    .tryhackme-badge-fixed:hover {
+        transform: scale(1.05);
     }
 
     .hero-buttons {
