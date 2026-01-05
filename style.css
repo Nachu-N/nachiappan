@@ -31,6 +31,10 @@ body {
     position: relative;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body::before {
     content: '';
     position: fixed;
@@ -290,9 +294,9 @@ body::after {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    z-index: 999;
-    width: 280px;
-    height: 400px;
+    z-index: 1000;
+    width: 300px;
+    height: 450px;
     background: rgba(26, 11, 46, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -300,6 +304,8 @@ body::after {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 183, 3, 0.3);
     transition: all 0.3s ease;
+    overflow: hidden;
+    display: block;
 }
 
 .tryhackme-badge-fixed:hover {
@@ -313,6 +319,14 @@ body::after {
     height: 100%;
     border: none;
     border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tryhackme-badge-fixed iframe::-webkit-scrollbar {
+    display: none;
 }
 
 .hero-title {
@@ -1242,12 +1256,13 @@ footer {
         position: fixed;
         top: auto;
         bottom: 20px;
-        right: 20px;
+        right: 10px;
         left: auto;
         transform: none;
-        width: 200px;
-        height: 280px;
+        width: 250px;
+        height: 350px;
         padding: 10px;
+        max-width: calc(100vw - 20px);
     }
 
     .tryhackme-badge-fixed:hover {
