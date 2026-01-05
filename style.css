@@ -280,6 +280,27 @@ body::after {
     z-index: 1;
     max-width: 900px;
     animation: fadeInUp 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tryhackme-badge {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tryhackme-badge iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .hero-title {
@@ -1203,6 +1224,15 @@ footer {
         font-size: 1rem;
         margin-bottom: 2rem;
         padding: 0 0.5rem;
+    }
+
+    .tryhackme-badge {
+        margin-bottom: 1.5rem;
+    }
+
+    .tryhackme-badge iframe {
+        max-width: 100%;
+        height: 120px;
     }
 
     .hero-buttons {
